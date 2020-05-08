@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
+        <style>
+            
+        .img1{
+            position: relative;
+            font-family:sans-serif;
+            font-variant: small-caps;
+        }
+        .centered{
+            position: absolute;
+            top:40%;
+            bottom: 50%;
+            left:27%;
+        }
+        .bottom-left{
+            position: absolute;
+            bottom:8px;
+            left:16px;
+            background-color:rgba(255,255,0,0.4);
+        }
+            
+        #fade:hover{
+           opacity: 0.2; 
+            transition: 0.3s ease-in-out;
+        }   
+        .header{
+            height: 39pxvw;
+            //text-align: center;
+            font-family:fantasy;
+            letter-spacing: 0.5px;
+            background:limegreen;
+            font-size: 1.5vw;
+            display:block;
+            cursor: pointer;
+        }
+        
+        a{
+            color:darkslategray;
+            text-decoration: none;
+            padding: 20px;
+        }
+            
+        .img2{
+            position: relative;
+            display: block;
+        }
+        .mySlides{display: none;}
+        </style> 
+    </head>
+    <body>
+        <div class="img1">
+            <img src="header.jpg" width="100%" height="190" style="opacity: 0.2">
+            <div class="centered" style="color: white" ><b><h1 style="font-size:2.5vw;background-color:rgba(0,0,0,0.6);"> Student Grievance Redressal Portal </h1></b></div>
+        </div>
+        <div class="header" style="text-align: center">
+                <a href="homepage.html"><img id="fade" src="homelogo.png" width="40" height="40"></a>
+                <a id="fade" href="StudentLogin.html">Students</a>
+                <b>|</b>
+                <a id="fade" href="MOCLogin.html">MOC</a>
+                <b>|</b>
+                <a id="fade" href="FacultyLogin.html">Faculty</a>
+                <b>|</b>
+                <a id="fade" href="Director.html">Director</a>
+                <b>|</b>
+                <a id="fade" href="UniHead.html">University Head</a>
+                <b>|</b>
+                <a id="fade" href="disclaimer.html">Disclaimer</a>
+                <b>|</b>
+                <a id="fade" href="formpage.html">Contact Us</a>
+        </div><br>
+        <div class="img2" >
+            <img class="mySlides" src="dkte1.jpg" style="width:100%;height: 500px">
+            <img class="mySlides" src="dkte2.jpg" style="width:100%;height: 500px">
+            <img class="mySlides" src="dkte3.jpg" style="width:100%;height: 500px">
+            <img class="mySlides" src="dkte4.jpg" style="width:100%;height: 500px">
+            <img class="mySlides" src="dkte5.jpg" style="width:100%;height: 500px">
+            <div class="bottom-left" style="color: black" ><b><h1 style="font-size:2.5vw">D.K.T.E's Textile and Engineering Institute,Ichalkaranji</h1></b></div>
+        </div>
+        <script>
+            var myIndex=0;
+            carousel();
+            
+            function carousel(){
+                var i;
+                var x = document.getElementsByClassName("mySlides");
+                for (i=0;i<x.length;i++)
+                    {
+                        x[i].style.display="none";
+                    }
+                myIndex++;
+                if(myIndex>x.length){myIndex=1}
+                x[myIndex-1].style.display="block";
+                setTimeout(carousel,2000);
+            }
+        </script><br>
+        <div class="header" style="background: black">
+            <img src="newlogo.png" width="100" height="100" style="padding:1px;">
+            <img src="line.png" width="2" height="80" style="padding:1px 0px;">
+        </div>
+           
+    </body>
+</html>
